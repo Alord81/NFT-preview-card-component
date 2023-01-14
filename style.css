@@ -1,0 +1,143 @@
+:root {
+    --main-color:#0d192b;
+    --card-color:#14253d;
+    --line-color:#2f415b;
+    --sec-line-color:#ffffff;
+    --color-hover:#2cfff7;
+    --color-p:#8cadd7;
+    --font-size-p:18px;
+    --border-radius:20px;
+    --main-padding:25px;
+    --main-transition: .3s;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-color);
+}
+
+main {
+    background-color: var(--card-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 400px;
+    border-radius: var(--border-radius);
+}
+@media (max-width:767px) {
+    main {
+        width: 350px;
+    }
+}
+/* Start imges */
+main .imges {
+    border-radius: var(--border-radius);
+    position: relative;
+    cursor: pointer;
+}
+main .imges > img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);   
+}
+main .imges > div {
+    display: none;
+}
+main .imges:hover > div {
+    display: block;
+}
+main .imges > div > img {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+main .imges > div > span {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 99.5%;
+    background-color: var(--color-hover);
+    opacity: 0.7;
+    border-radius: var(--border-radius);
+}
+/* End imges */
+/* Start Info */
+main .info {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+main .info h1 {
+    padding-bottom: var(--main-padding);
+    color: var(--sec-line-color);
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+main .info h1:hover {
+color: var(--color-hover);
+}
+main .info p {
+    color: var(--color-p);
+    font-size: var(--font-size-p);
+    font-weight: 300;
+    line-height: 30px;
+}
+/* End Info */
+/* Start Data */
+main .data {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--main-padding);
+    border-bottom: 1px solid var(--line-color);
+}
+.data > div {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.data > div:first-child span {
+    color: var(--color-hover);
+}
+.data > div:last-child span {
+    color: var(--color-p);
+}
+.data > div span {
+    padding-left: 10px;
+}
+/* End Data */
+/* Start User */
+main .user {
+    padding-top: var(--main-padding);
+    display: flex;
+    align-items: center;
+    padding-bottom: var(--main-padding);
+}
+main .user img {
+    width: 40px;
+    border: var(--sec-line-color) 1px solid;
+    border-radius: 50%;
+}
+main .user p {
+    color: var(--color-p);
+    padding-left: var(--main-padding);
+    font-weight: 300;
+}
+main .user p span {
+    color: var(--sec-line-color);
+    padding-left: 2px;
+    transition: var(--main-transition);
+    cursor: pointer;
+}
+main .user p span:hover {
+    color: var(--color-hover);
+}
+/* End User */
